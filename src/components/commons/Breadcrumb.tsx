@@ -6,7 +6,7 @@ import { BreadcrumbList } from 'schema-dts'
 import { ReactNode } from 'react'
 import classNames from 'classnames'
 
-const DOMAIN = 'https://defiscan.live'
+const DOMAIN = 'https://explorer.sternberg-partners.de'
 
 export interface BreadcrumbItem {
   path: string

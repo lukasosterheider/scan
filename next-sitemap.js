@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://defiscan.live',
+  siteUrl: process.env.SITE_URL || 'https://explorer.sternberg-partners.de',
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [{
