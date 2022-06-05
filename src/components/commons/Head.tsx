@@ -15,7 +15,7 @@ interface HeadProps {
  * @param {string} [props.description] added to <meta og:description> and <meta :description>
  */
 export function Head (props: PropsWithChildren<HeadProps>): JSX.Element {
-  const title = props.title !== undefined ? `${props.title} • DeFi Scan – Native Decentralized Finance for Bitcoin` : undefined
+  const title = props.title !== undefined ? `${props.title} • DeFiChain Blockchain Explorer - Native Decentralized Finance for Bitcoin` : undefined
   const description = truncate(props.description, { length: 220 })
 
   return (

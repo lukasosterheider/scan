@@ -9,9 +9,13 @@ import { Network as NetworkObject, getNetwork } from '@defichain/jellyfish-netwo
  */
 export enum NetworkConnection {
   LocalPlayground = 'Local',
-  RemotePlayground = 'Playground',
   MainNet = 'MainNet',
-  TestNet = 'TestNet'
+  TestNet = 'TestNet',
+  OceanMainNet = 'Ocean MainNet',
+  OceanTestNet = 'Ocean TestNet',
+  RemotePlayground = 'Ocean Playground',
+  MyMainNet = 'mydefichain MainNet',
+  MyTestNet = 'mydefichain TestNet'
 }
 
 export type NetworkName = NetworkObject['name']
@@ -43,6 +47,14 @@ function mapNetworkObject (connection: NetworkConnection): NetworkContextObject 
     case NetworkConnection.MainNet:
       return { connection: connection, ...getNetwork('mainnet') }
     case NetworkConnection.TestNet:
+      return { connection: connection, ...getNetwork('testnet') }
+    case NetworkConnection.OceanMainNet:
+      return { connection: connection, ...getNetwork('mainnet') }
+    case NetworkConnection.OceanTestNet:
+      return { connection: connection, ...getNetwork('testnet') }
+    case NetworkConnection.MyMainNet:
+      return { connection: connection, ...getNetwork('mainnet') }
+    case NetworkConnection.MyTestNet:
       return { connection: connection, ...getNetwork('testnet') }
     case NetworkConnection.RemotePlayground:
     case NetworkConnection.LocalPlayground:

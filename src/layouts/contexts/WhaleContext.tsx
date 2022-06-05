@@ -66,18 +66,42 @@ function newWhaleClient (connection?: string | NetworkConnection): WhaleApiClien
         network: 'regtest',
         version: 'v0'
       })
+    case NetworkConnection.OceanMainNet:
+      return new WhaleApiClient({
+        url: 'https://ocean.defichain.com',
+        network: 'mainnet',
+        version: 'v0'
+      })
+    case NetworkConnection.OceanTestNet:
+      return new WhaleApiClient({
+        url: 'https://testnet.ocean.jellyfishsdk.com',
+        network: 'testnet',
+        version: 'v0'
+      })
+    case NetworkConnection.MyMainNet:
+      return new WhaleApiClient({
+        url: 'http://ocean.mydefichain.com:3000',
+        network: 'mainnet',
+        version: 'v0'
+      })
+    case NetworkConnection.MyTestNet:
+      return new WhaleApiClient({
+        url: 'http://testnet-ocean.mydefichain.com:3000',
+        network: 'testnet',
+        version: 'v0'
+      })
     case NetworkConnection.TestNet:
       return new WhaleApiClient({
         url: 'https://testnet.ocean.jellyfishsdk.com',
         network: 'testnet',
-        version: 'v0.34'
+        version: 'v0'
       })
     case NetworkConnection.MainNet:
     default:
       return new WhaleApiClient({
-        url: 'https://ocean.defichain.com',
+        url: 'https://ocean.sternberg-partners.de',
         network: 'mainnet',
-        version: 'v0.35'
+        version: 'v0.0'
       })
   }
 }
@@ -88,14 +112,30 @@ function newRpcClient (connection?: string | NetworkConnection): WhaleRpcClient 
       return new WhaleRpcClient('http://localhost:19553/v0/regtest/rpc')
     case NetworkConnection.RemotePlayground:
       return new WhaleRpcClient('https://playground.jellyfishsdk.com/v0/regtest/rpc')
+    case NetworkConnection.OceanMainNet: {
+      const version = 'v0'
+      return new WhaleRpcClient(`https://ocean.defichain.com/${version}/mainnet/rpc`)
+    }
+    case NetworkConnection.OceanTestNet: {
+      const version = 'v0'
+      return new WhaleRpcClient(`https://testnet.ocean.jellyfishsdk.com/${version}/testnet/rpc`)
+    }
+    case NetworkConnection.MyMainNet: {
+      const version = 'v0'
+      return new WhaleRpcClient(`https://ocean.mydefichain.com:3000/${version}/mainnet/rpc`)
+    }
+    case NetworkConnection.MyTestNet: {
+      const version = 'v0'
+      return new WhaleRpcClient(`https://testnet-ocean.mydefichain.com:3000/${version}/testnet/rpc`)
+    }
     case NetworkConnection.TestNet: {
-      const version = 'v0.34'
+      const version = 'v0'
       return new WhaleRpcClient(`https://testnet.ocean.jellyfishsdk.com/${version}/testnet/rpc`)
     }
     case NetworkConnection.MainNet:
     default: {
-      const version = 'v0.35'
-      return new WhaleRpcClient(`https://ocean.defichain.com/${version}/mainnet/rpc`)
+      const version = 'v0.0'
+      return new WhaleRpcClient(`https://ocean.sternberg-partners.de/${version}/mainnet/rpc`)
     }
   }
 }

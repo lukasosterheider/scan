@@ -1,6 +1,6 @@
 context('/vaults/[vaultid] - In Liquidation on desktop', () => {
   before(() => {
-    cy.request('https://ocean.defichain.com/v0/mainnet/loans/auctions?size=1')
+    cy.request('https://ocean.sternberg-partners.de/v0.0/mainnet/loans/auctions?size=1')
       .then(function (response) {
         if (response.body.data.length !== 1) {
           this.skip()
@@ -105,7 +105,7 @@ context('/vaults/[vaultid] - In Liquidation on desktop', () => {
 
 context('/vaults/[vaultid] - In Liquidation on mobile', () => {
   before(() => {
-    cy.request('https://ocean.defichain.com/v0/mainnet/loans/auctions?size=1')
+    cy.request('https://ocean.sternberg-partners.de/v0.0/mainnet/loans/auctions?size=1')
       .then(function (response) {
         if (response.body.data.length !== 1) {
           this.skip()

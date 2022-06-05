@@ -11,8 +11,8 @@ import { Header } from './components/Header'
 import { PoolPairsProvider } from '@store/poolpairs'
 import { SupplyProvider } from '@store/supply'
 
-const title = 'DeFi Scan – Native Decentralized Finance for Bitcoin'
-const description = 'DeFi Blockchain, enabling decentralized finance with Bitcoin-grade security, strength and immutability. A blockchain dedicated to fast, intelligent and transparent financial services, accessible by everyone.'
+const title = 'DeFiChain Blockchain Explorer – Native Decentralized Finance for Bitcoin'
+const description = 'A community driven Blockchain Explorer for DeFiChain ($DFI), enabling decentralized finance with Bitcoin-grade security, strength and immutability. Powered by Sternberg Partners.'
 
 /**
  * Default Layout with <Head> providing default Metadata for SEO

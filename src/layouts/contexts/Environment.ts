@@ -39,8 +39,11 @@ export function getEnvironment (): Environment {
     case 'production':
       return new Environment('Production', false, [
         NetworkConnection.MainNet,
-        NetworkConnection.TestNet,
-        NetworkConnection.RemotePlayground
+        NetworkConnection.OceanMainNet,
+        NetworkConnection.OceanTestNet,
+        NetworkConnection.RemotePlayground,
+        NetworkConnection.MyMainNet,
+        NetworkConnection.MyTestNet
       ])
     case 'development':
     default:
