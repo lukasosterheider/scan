@@ -80,13 +80,13 @@ function newWhaleClient (connection?: string | NetworkConnection): WhaleApiClien
       })
     case NetworkConnection.MyMainNet:
       return new WhaleApiClient({
-        url: 'http://ocean.mydefichain.com:3000',
+        url: 'https://ocean.mydefichain.com',
         network: 'mainnet',
         version: 'v0'
       })
     case NetworkConnection.MyTestNet:
       return new WhaleApiClient({
-        url: 'http://testnet-ocean.mydefichain.com:3000',
+        url: 'https://testnet-ocean.mydefichain.com:8443',
         network: 'testnet',
         version: 'v0'
       })
@@ -122,11 +122,11 @@ function newRpcClient (connection?: string | NetworkConnection): WhaleRpcClient 
     }
     case NetworkConnection.MyMainNet: {
       const version = 'v0'
-      return new WhaleRpcClient(`https://ocean.mydefichain.com:3000/${version}/mainnet/rpc`)
+      return new WhaleRpcClient(`https://ocean.mydefichain.com/${version}/mainnet/rpc`)
     }
     case NetworkConnection.MyTestNet: {
       const version = 'v0'
-      return new WhaleRpcClient(`https://testnet-ocean.mydefichain.com:3000/${version}/testnet/rpc`)
+      return new WhaleRpcClient(`https://testnet-ocean.mydefichain.com:8443/${version}/testnet/rpc`)
     }
     case NetworkConnection.TestNet: {
       const version = 'v0'
