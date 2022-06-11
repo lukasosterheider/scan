@@ -13,6 +13,7 @@ import { WhaleApiClient } from '@defichain/whale-api-client'
 import { Breadcrumb } from '@components/commons/Breadcrumb'
 import { useEffect, useState } from 'react'
 import { useRouter } from 'next/router'
+import { PoolPairHistoryGraph } from './_components/PoolPairHistoryGraph'
 
 interface PoolPairPageProps {
   poolpair: PoolPairData
@@ -77,6 +78,15 @@ export default function PoolPairPage (props: InferGetServerSidePropsType<typeof 
             <PoolPairDetails poolpair={poolpairs} />
           </div>
           <div className='w-full lg:w-3/4 overflow-hidden'>
+            <h3 className='text-lg font-semibold'>
+              Price History
+            </h3>
+            <div className='hidden lg:block'>
+              <PoolPairHistoryGraph tokenA={props.poolpair.tokenA.symbol} tokenB={props.poolpair.tokenB.symbol} />
+            </div>
+            <div className='my-6 lg:hidden'>
+              <PoolPairHistoryGraph tokenA={props.poolpair.tokenA.symbol} tokenB={props.poolpair.tokenB.symbol} />
+            </div>
             <h3 className='text-lg font-semibold'>
               Swap History
             </h3>

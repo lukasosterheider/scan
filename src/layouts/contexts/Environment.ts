@@ -49,9 +49,11 @@ export function getEnvironment (): Environment {
     default:
       return new Environment('Development', true, [
         NetworkConnection.MainNet,
+        NetworkConnection.OceanMainNet,
+        NetworkConnection.OceanTestNet,
         NetworkConnection.RemotePlayground,
-        NetworkConnection.LocalPlayground,
-        NetworkConnection.TestNet
+        NetworkConnection.MyMainNet,
+        NetworkConnection.MyTestNet
       ])
   }
 }
