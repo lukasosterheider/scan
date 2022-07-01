@@ -45,7 +45,7 @@ function SwapRow ({ swap }: { swap: PoolSwapData }): JSX.Element {
           <TextTruncate text={swap.txid} />
         </TxIdLink>
       </OverflowTable.Cell>
-      <OverflowTable.Cell>
+      <OverflowTable.Cell className='dark:text-gray-100'>
         {age}
       </OverflowTable.Cell>
       <OverflowTable.Cell>
@@ -62,14 +62,16 @@ function SwapRow ({ swap }: { swap: PoolSwapData }): JSX.Element {
           swap.from === undefined
             ? ('N/A')
             : (
-              <div className='flex items-center justify-end'>
+              <div className='flex items-center justify-end dark:text-gray-100'>
                 <NumberFormat
                   value={swap.fromAmount}
                   fixedDecimalScale
                   thousandSeparator=','
                   displayType='text'
                 />
-                <FromIcon className='w-5 h-5 ml-0.5' />
+                <div className='bg-lime-green'>
+                  <FromIcon className='w-5 h-5 ml-1' />
+                </div>
               </div>
 
               )
@@ -80,14 +82,14 @@ function SwapRow ({ swap }: { swap: PoolSwapData }): JSX.Element {
           swap.to === undefined
             ? ('N/A')
             : (
-              <div className='flex items-center justify-end'>
+              <div className='flex items-center justify-end dark:text-gray-100'>
                 <NumberFormat
                   value={swap.to.amount}
                   fixedDecimalScale
                   thousandSeparator=','
                   displayType='text'
                 />
-                <ToIcon className='w-5 h-5 ml-0.5' />
+                <ToIcon className='w-5 h-5 ml-1' />
               </div>
               )
         }

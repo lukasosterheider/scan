@@ -1,4 +1,4 @@
-import { LoanVaultActive, LoanVaultLiquidated, LoanVaultState } from '@defichain/whale-api-client/dist/api/loan'
+import { CollateralToken, LoanVaultActive, LoanVaultLiquidated, LoanVaultState } from '@defichain/whale-api-client/dist/api/loan'
 import { AddressLink } from '@components/commons/link/AddressLink'
 import { CollapsibleSection } from '@components/commons/sections/CollapsibleSection'
 import { OverflowTable } from '@components/commons/OverflowTable'
@@ -11,13 +11,19 @@ import { VaultHealthBar } from '../../_components/commons/VaultHealthBar'
 import { VaultNumberValues } from '../../_components/commons/VaultNumberValues'
 import { VaultDetailsListItem } from '../../_components/commons/VaultDetailsListItem'
 
-export function VaultIdDetails (props: { vault: LoanVaultActive | LoanVaultLiquidated, liquidatedVaultDerivedValues?: LiquidatedVaultDerivedValues }): JSX.Element {
+interface VaultIdDetailsProps {
+  vault: LoanVaultActive | LoanVaultLiquidated
+  liquidatedVaultDerivedValues?: LiquidatedVaultDerivedValues
+  collateralTokens: CollateralToken[]
+}
+
+export function VaultIdDetails (props: VaultIdDetailsProps): JSX.Element {
   const isVaultActive = (props.vault.state !== LoanVaultState.IN_LIQUIDATION && (props.vault.loanAmounts.length > 0 && props.vault.collateralAmounts.length > 0))
 
   return (
     <>
       <div className='mt-8 hidden md:block' data-testid='VaultDetailsDesktop'>
-        <h2 className='text-xl font-semibold' data-testid='VaultDetailsDesktop.Heading'>
+        <h2 className='text-xl font-semibold dark:text-dark-gray-900' data-testid='VaultDetailsDesktop.Heading'>
           Vault Details
         </h2>
         <div className='flex flex-wrap mt-3 items-center'>
@@ -56,7 +62,7 @@ export function VaultIdDetails (props: { vault: LoanVaultActive | LoanVaultLiqui
           </OverflowTable>
           {
             (props.vault.state !== LoanVaultState.IN_LIQUIDATION && isVaultActive) && (
-              <VaultHealthBar vault={props.vault} />
+              <VaultHealthBar vault={props.vault} collateralTokens={props.collateralTokens} />
             )
           }
         </div>
@@ -70,7 +76,7 @@ export function VaultIdDetails (props: { vault: LoanVaultActive | LoanVaultLiqui
           <MobileVaultDetails vault={props.vault} liquidatedVaultDerivedValues={props.liquidatedVaultDerivedValues} />
           {
             (props.vault.state !== LoanVaultState.IN_LIQUIDATION && isVaultActive) && (
-              <VaultHealthBar vault={props.vault} />
+              <VaultHealthBar vault={props.vault} collateralTokens={props.collateralTokens} />
             )
           }
         </div>
@@ -82,7 +88,7 @@ export function VaultIdDetails (props: { vault: LoanVaultActive | LoanVaultLiqui
 function DesktopVaultDetailsRow (props: { vault: LoanVaultActive | LoanVaultLiquidated, liquidatedVaultDerivedValues?: LiquidatedVaultDerivedValues }): JSX.Element {
   return (
     <OverflowTable.Row
-      className={classNames(props.vault.state === LoanVaultState.FROZEN ? 'text-gray-200' : 'text-gray-900')}
+      className={classNames(props.vault.state === LoanVaultState.FROZEN ? 'text-gray-200' : 'text-gray-900 dark:text-gray-100')}
     >
       <OverflowTable.Cell>
         <AddressLink address={props.vault.ownerAddress} testId='DesktopVaultDetailsRow.OwnerId'>

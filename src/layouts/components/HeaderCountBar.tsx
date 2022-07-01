@@ -14,7 +14,7 @@ export function HeaderCountBar (props: { className: string }): JSX.Element {
   function HeaderCount (props: { text: string, count?: number, className?: string }): JSX.Element {
     return (
       <li className={classNames(props.className, 'py-1 mx-2 lg:mx-0')}>
-        <span className='text-sm text-primary-100 font-medium'>{props.text} </span>
+        <span className='text-sm text-primary-100 font-medium dark:text-dark-gray-500'>{props.text} </span>
         <span className='text-sm text-white ml-0.5'>
           {props.count !== undefined ? (
             <NumberFormat value={props.count} displayType='text' thousandSeparator />
@@ -29,7 +29,7 @@ export function HeaderCountBar (props: { className: string }): JSX.Element {
   function HeaderAmount (props: { text: string, count?: number, className?: string }): JSX.Element {
     return (
       <li className={classNames(props.className, 'py-1')}>
-        <span className='text-sm text-primary-100 font-medium'>{props.text} </span>
+        <span className='text-sm text-primary-100 font-medium dark:text-dark-gray-500'>{props.text} </span>
         <span className='text-sm text-white ml-0.5'>
           {props.count !== undefined ? (
             <NumberFormat
