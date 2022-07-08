@@ -11,6 +11,7 @@ import { Header } from './components/Header'
 import { PoolPairsProvider } from '@store/poolpairs'
 import { SupplyProvider } from '@store/supply'
 import { getInitialTheme, ThemeProvider } from '@contexts/ThemeContext'
+import { WarningBanner } from '@components/commons/banner/WarningBanner'
 
 const title = 'DeFiChain Blockchain Explorer – Native Decentralized Finance for Bitcoin'
 const description = 'A community driven Blockchain Explorer for DeFiChain ($DFI), enabling decentralized finance with Bitcoin-grade security, strength and immutability. Powered by Sternberg Partners.'
@@ -60,6 +61,7 @@ export function Default (props: PropsWithChildren<ScanAppProps>): JSX.Element | 
             <StatsProvider>
               <SupplyProvider>
                 <PoolPairsProvider>
+                  <WarningBanner />
                   <ThemeProvider theme={initialTheme}>
                     <Header />
                     <main className='flex-grow'>
