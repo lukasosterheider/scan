@@ -3,9 +3,9 @@
 [![codecov](https://codecov.io/gh/DeFiCh/scan/branch/main/graph/badge.svg?token=GZe1B7l9ra)](https://codecov.io/gh/DeFiCh/scan)
 [![Maintainability](https://api.codeclimate.com/v1/badges/9e2e89a0c9cfa93478eb/maintainability)](https://codeclimate.com/github/DeFiCh/scan/maintainability)
 
-# [DeFi Scan](https://defiscan.live)
+# [Explore DeFiChain - A community explorer](https://explore-defichain.com)
 
-> https://defiscan.live
+> https://explore-defichain.com
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/7c8f536f-028f-493f-953f-293dcde36f89/deploy-status)](https://app.netlify.com/sites/defi-scan/deploys)
 
