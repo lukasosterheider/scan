@@ -3,7 +3,7 @@
 [![codecov](https://codecov.io/gh/DeFiCh/scan/branch/main/graph/badge.svg?token=GZe1B7l9ra)](https://codecov.io/gh/DeFiCh/scan)
 [![Maintainability](https://api.codeclimate.com/v1/badges/9e2e89a0c9cfa93478eb/maintainability)](https://codeclimate.com/github/DeFiCh/scan/maintainability)
 
-# [Explore DeFiChain - A community explorer](https://explore-defichain.com)
+# [Explore-DeFiChain.com - A community explorer](https://explore-defichain.com)
 
 > https://explore-defichain.com
 
