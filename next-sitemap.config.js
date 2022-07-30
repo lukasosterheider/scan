@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://explorer.sternberg-partners.de',
+  siteUrl: process.env.SITE_URL || 'https://explore-defichain.com',
   generateRobotsTxt: true,
   robotsTxtOptions: {
     policies: [{

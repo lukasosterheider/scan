@@ -99,9 +99,9 @@ function newWhaleClient (connection?: string | NetworkConnection): WhaleApiClien
     case NetworkConnection.MainNet:
     default:
       return new WhaleApiClient({
-        url: 'https://ocean.sternberg-partners.de',
+        url: 'https://ocean.explore-defichain.com',
         network: 'mainnet',
-        version: 'v0.0'
+        version: 'v0'
       })
   }
 }
@@ -134,8 +134,8 @@ function newRpcClient (connection?: string | NetworkConnection): WhaleRpcClient 
     }
     case NetworkConnection.MainNet:
     default: {
-      const version = 'v0.0'
-      return new WhaleRpcClient(`https://ocean.sternberg-partners.de/${version}/mainnet/rpc`)
+      const version = 'v0'
+      return new WhaleRpcClient(`https://ocean.explore-defichain.com/${version}/mainnet/rpc`)
     }
   }
 }

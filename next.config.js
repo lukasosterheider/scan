@@ -12,7 +12,7 @@ const securityHeaders = [
       `script-src 'self' app.netlify.com netlify-cdp-loader.netlify.app ${process.env.NODE_ENV === 'development' ? `'unsafe-eval'` : ''};` +
       `style-src 'self' fonts.googleapis.com 'unsafe-inline';` +
       `font-src fonts.gstatic.com;` +
-      `connect-src 'self' ocean.sternberg-partners.de ocean.defichain.com wallet.defichain.com ocean.mydefichain.com testnet-ocean.mydefichain.com:* *.jellyfishsdk.com playground.jellyfishsdk.com next.graphql.defichain-income.com ${process.env.NODE_ENV === 'development' ? `ws://localhost:3000/_next/webpack-hmr` : ''};` +
+      `connect-src 'self' ocean.explore-defichain.com ocean.defichain.com wallet.defichain.com ocean.mydefichain.com testnet-ocean.mydefichain.com:* *.jellyfishsdk.com playground.jellyfishsdk.com next.graphql.defichain-income.com ${process.env.NODE_ENV === 'development' ? `ws://localhost:3000/_next/webpack-hmr` : ''};` +
       `prefetch-src 'self';`
   },
   {
