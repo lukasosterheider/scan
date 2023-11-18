@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://defiscan.live</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-04T17:46:15.351Z</lastmod></url>
-<url><loc>https://defiscan.live/auctions</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-04T17:46:15.351Z</lastmod></url>
-<url><loc>https://defiscan.live/blocks</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-04T17:46:15.351Z</lastmod></url>
-<url><loc>https://defiscan.live/dex</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-04T17:46:15.351Z</lastmod></url>
-<url><loc>https://defiscan.live/masternodes</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-04T17:46:15.351Z</lastmod></url>
-<url><loc>https://defiscan.live/oracles</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-04T17:46:15.351Z</lastmod></url>
-<url><loc>https://defiscan.live/stats/burn</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-04T17:46:15.351Z</lastmod></url>
-<url><loc>https://defiscan.live/tokens</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-04T17:46:15.351Z</lastmod></url>
-<url><loc>https://defiscan.live/vaults</loc><changefreq>daily</changefreq><priority>0.7</priority><lastmod>2022-06-04T17:46:15.351Z</lastmod></url>
+<url><loc>https://explore-defichain.com</loc><lastmod>2023-11-18T13:23:55.314Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://explore-defichain.com/auctions</loc><lastmod>2023-11-18T13:23:55.314Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://explore-defichain.com/blocks</loc><lastmod>2023-11-18T13:23:55.314Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://explore-defichain.com/dex</loc><lastmod>2023-11-18T13:23:55.314Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://explore-defichain.com/masternodes</loc><lastmod>2023-11-18T13:23:55.314Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://explore-defichain.com/oracles</loc><lastmod>2023-11-18T13:23:55.314Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://explore-defichain.com/stats/burn</loc><lastmod>2023-11-18T13:23:55.314Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://explore-defichain.com/tokens</loc><lastmod>2023-11-18T13:23:55.314Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://explore-defichain.com/vaults</loc><lastmod>2023-11-18T13:23:55.314Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
