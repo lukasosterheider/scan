@@ -3,11 +3,11 @@ name: CI - E2E
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 1 * * *'
+    - cron: "0 1 * * *"
   push:
-    branches: [ main ]
+    branches: [main]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event_name }}-${{ github.ref }}
@@ -21,26 +21,27 @@ jobs:
     strategy:
       fail-fast: false # https://github.com/cypress-io/github-action/issues/48
       matrix:
-        containers: [ 1, 2, 3, 4, 5 ]
+        containers: [1, 2, 3, 4, 5]
     steps:
-      - uses: actions/checkout@2541b1294d2704b0964813337f33b291d3f8596b
+      - uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3.6.0
 
-      - uses: actions/setup-node@eeb10cff27034e7acf239c5d29f62154018672fd
+      - run: corepack enable pnpm
+
+      - uses: actions/setup-node@5e21ff4d9bc1a8cf6de233a3057d20ec6b3fb69d # v3.8.1
         with:
-          node-version: 16
-          cache: 'npm'
+          node-version-file: ".nvmrc"
 
-      - run: npm ci
+      - run: pnpm install --frozen-lockfile
 
-      - uses: cypress-io/github-action@30008f1458a5a2c97054bfe118fe33d75976c482
+      - uses: cypress-io/github-action@248bde77443c376edc45906ede03a1aba9da0462 # v5.8.4
         with:
           config-file: cypress.config.js
           install: false
           record: true
           parallel: true
-          build: npm run cypress:build
-          start: npm run start
-          wait-on: 'http://localhost:3000'
+          build: pnpm run cypress:build
+          start: pnpm run start
+          wait-on: "http://localhost:3000"
           browser: chrome
           spec: cypress/e2e/**
           tag: ${{ github.event_name }}
@@ -48,4 +49,4 @@ jobs:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - uses: codecov/codecov-action@81cd2dc8148241f03f5839d295e000b8f761e378
+      - uses: codecov/codecov-action@eaaf4bedf32dbdc6b720b63067d99c4d77d6047d # v3.1.4
